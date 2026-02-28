@@ -1,7 +1,10 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-}
+  experimental: {
+    serverComponentsExternalPackages: ['pino', 'pino-pretty', 'thread-stream'],
+  },
+  // kalau sudah ada config lain, tambahin di sini
+};
 
-export default nextConfig
+export default nextConfig;
