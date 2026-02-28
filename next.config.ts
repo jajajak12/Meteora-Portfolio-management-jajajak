@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: [
-      'pino',
-      'pino-pretty',
-      'thread-stream',  // ini penting, Pino pakai worker threads
-    ],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('pino-pretty');
+      config.externals.push('encoding');  // kadang ikut error
+    }
+    return config;
   },
 };
 
