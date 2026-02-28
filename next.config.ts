@@ -1,10 +1,7 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ['pino', 'pino-pretty', 'thread-stream'],
-  },
-  // kalau sudah ada config lain, tambahin di sini
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  serverExternalPackages: ['pino', 'pino-pretty', 'thread-stream'],  // exclude Pino & deps dari bundling
+  // kalau ada config lain (misal images, reactStrictMode), taruh di sini aja
 };
 
 export default nextConfig;
