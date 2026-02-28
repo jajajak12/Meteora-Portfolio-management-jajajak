@@ -5,13 +5,13 @@ import { AppLayout } from '@/components/app-layout'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: 'Yeeteora - LP Strategies',
+  title: 'Meteora - LP Strategies',
   description: 'Discover and provide liquidity for high-performing DLMM pairs',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Yeeteora',
+    title: 'Meteora',
   },
 }
 
